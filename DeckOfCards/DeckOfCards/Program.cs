@@ -9,24 +9,19 @@ namespace DeckOfCards
         {
             Options();
         }
-
+        /// <summary>
+        /// Give user options to view, add or shuffle a card
+        /// </summary>
         public static void Options()
         {
             Console.WriteLine("Pick 1, 2, 3, or 4.\n" +
                "1. View the Deck\n" +
                "2. Add a card\n" +
-               "3. Shuffle\n" +
-               "4. Exit");
-            int selection = 0;
-            try
-            {
-                selection = int.Parse(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Pick 1, 2, 3, or 4.");
-            }
-            finally
+               "3. Remove\n" +
+               "4. Shuffle\n" +
+               "5. Exit\n");
+
+            if (Int32.TryParse(Console.ReadLine(), out int selection) && selection > 0 && selection <= 5)
             {
                 switch (selection)
                 {
@@ -35,20 +30,27 @@ namespace DeckOfCards
                         ListOfCards();
                         break;
                     case 2:
+                        //AddACard();
                         break;
                     case 3:
+                        //RemoveACard();
                         break;
                     case 4:
-                        Environment.Exit(0);
+                        //Shuffle();
                         break;
-                    default:
-                        Options();
+                    case 5:
+                        Environment.Exit(0);
                         break;
                 }
             }
-            Options();
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Please enter one of the choices.");
+                Options();
+            }                         
         }
-
+        //create the collection of cards
         public static void ListOfCards()
         {
             //Collections initializer
@@ -75,7 +77,7 @@ namespace DeckOfCards
                 Console.WriteLine(suit);
             }
             Console.Read();
-            Console.Clear();
+            Options();
         }
     }
 }
