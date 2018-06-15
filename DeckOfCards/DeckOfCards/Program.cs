@@ -33,7 +33,7 @@ namespace DeckOfCards
                         //AddACard();
                         break;
                     case 3:
-                        //RemoveACard();
+                        RemoveACard();
                         break;
                     case 4:
                         //Shuffle();
