@@ -17,7 +17,9 @@ dotnet run
 ---
 ## What this application does
 This application will create a deck of cards.  
+
 It will allow the deck to be shuffled.
+
 New cards can be added.
 
 ---
