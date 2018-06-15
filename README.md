@@ -1,9 +1,9 @@
 
 # Lab07 Collections
-Build a deck of cards and shuffle the cards using the concepts of collections and enumerables.
+Build a deck of cards and shuffle the cards using the concepts of generics and collections.
 
 ## Dependencies
-This game runs on .NET Core 2.1, which can be downloaded [here](https://www.microsoft.com/net/download/macos).
+This application runs on .NET Core 2.1, which can be downloaded [here](https://www.microsoft.com/net/download/macos).
 
 ---
 ## Build
@@ -16,23 +16,21 @@ dotnet run
 ```
 ---
 ## What this application does
-This application will create a deck of cards and shuffle them.
+This application will create a deck of cards.  
+It will allow the deck to be shuffled.
+New cards can be added.
 
 ---
 ## How to Use the Program
-Users can select to view the deck of cards and shuffle the deck.
+Users can select to view the deck of cards, add a card, or shuffle the deck.
 
 ---
 
 ## Screenshot Walk Through
-1: 
+1: Menu
 
-![]()
+![Menu](/assets/menu.png)
 
-2: 
+2: View the Deck
 
-![]()
-
-3: 
-
-![]()
+![View the Deck](/assets/deck.png)
