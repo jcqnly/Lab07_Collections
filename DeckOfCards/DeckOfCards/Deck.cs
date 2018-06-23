@@ -33,7 +33,7 @@ namespace DeckOfCards
         //this was implemented to get the deck to write to the console
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = 0; i <= count; i++)
+            for (int i = 0; i < count; i++)
             {
 
                 yield return deck[i];

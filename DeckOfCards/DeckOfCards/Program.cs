@@ -85,12 +85,31 @@ namespace DeckOfCards
 
             //GetEnumerator was implemented in the Deck class
             //display the entire deck
+            foreach (Cards card in DeckOfCards)
+            {
+                Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
+            }
             Console.WriteLine();
             Console.Read();
             Console.Clear();
-            //DeckOfCards.Remove("King Of Clubs");
-            
-
+            //adding a card to the deck requires an instantiation of a new Card object
+            Console.WriteLine("Let's add a Ten of Spades to the deck.");
+            Cards card17 = new Cards((Values)5, (SuitsinDeck)1);
+            DeckOfCards.Add(card17);
+            foreach (Cards card in DeckOfCards)
+            {
+                Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
+            }
+            Console.Read();
+            Console.WriteLine("Let's remove that Ten of Spades from the deck.");
+            DeckOfCards.Remove(card17);
+            Console.Read();
+            Console.Clear();
+            foreach (Cards card in DeckOfCards)
+            {
+                Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
+            }
+            Console.Read();
             //Options();
         }
     }

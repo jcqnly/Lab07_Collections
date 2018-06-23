@@ -16,6 +16,7 @@ namespace DeckOfCards
         King,
         Queen,
         Jack,
+        Ten
     }
     public enum SuitsinDeck
     {
