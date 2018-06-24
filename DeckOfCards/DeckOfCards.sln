@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{1B4EC61E-963F-4292-B6C8-970BF89B4CA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{1B4EC61E-963F-4292-B6C8-970BF89B4CA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckTest", "DeckTest\DeckTest.csproj", "{19AB0230-7400-4FD1-878F-072F57FA4E9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1B4EC61E-963F-4292-B6C8-970BF89B4CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B4EC61E-963F-4292-B6C8-970BF89B4CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B4EC61E-963F-4292-B6C8-970BF89B4CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19AB0230-7400-4FD1-878F-072F57FA4E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19AB0230-7400-4FD1-878F-072F57FA4E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19AB0230-7400-4FD1-878F-072F57FA4E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19AB0230-7400-4FD1-878F-072F57FA4E9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

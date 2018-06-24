@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DeckOfCards
 {
-    class Deck<T> : IEnumerable
+    public class Deck<T> : IEnumerable
     {   //set the initial size of the array for the deck
         T[] deck = new T[16];
 
@@ -28,30 +28,45 @@ namespace DeckOfCards
         /// Removes a card
         /// </summary>
         /// <param name="card"></param>
-        public void Remove(T card)
+        public bool Remove(T card)
         {
-            //this method removes the most recently added card
+            //this method removes the most recently added card, so...
+            if(card == null)
+            {
+                return false;
+            }
+            //the if statement is to catch if a card's value is null
+            //it was added for testing purposes
             deck[--count] = card;
             Array.Resize(ref deck, deck.Length - 1);
+            return true;
         }
 
         /// <summary>
         /// Shuffle the deck of type T
         /// </summary>
         /// <param name="deckOfCards"></param>
-        public void Shuffle(Deck<T> deckOfCards)
+        public bool Deal(Deck<T> deckOfCards)
         {
-            Random r = new Random();
-            for (int n = count-1; n > 0; --n)
+            try
             {
-                //The random number generated will not be greater than the length
-                int k = r.Next(n + 1);
-                //temp is of type T and will now hold the card that will soon be replaced by...
-                T temp = deck[n];
-                //the random generated number for the deck index
-                deck[n] = deck[k];
-                //put that card that was taken out back into the deck
-                deck[k] = temp;
+                Random r = new Random();
+                for (int n = count - 1; n > 0; --n)
+                {
+                    //The random number generated will not be greater than the length
+                    int k = r.Next(n + 1);
+                    //temp is of type T and will now hold the card that will soon be replaced by...
+                    T temp = deck[n];
+                    //the random generated number for the deck index
+                    deck[n] = deck[k];
+                    //put that card that was taken out back into the deck
+                    deck[k] = temp;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
 

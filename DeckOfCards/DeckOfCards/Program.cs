@@ -80,7 +80,14 @@ namespace DeckOfCards
 
             //shuffling the deck:
             Console.WriteLine("Let's shuffle the deck: ");
-            DeckOfCards.Shuffle(DeckOfCards);
+            DeckOfCards.Deal(DeckOfCards);
+            foreach (Cards card in DeckOfCards)
+            {
+                Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
+            }
+            Console.Read();
+            DeckOfCards.Deal(DeckOfCards);
+            Console.WriteLine("<------Shuffling Again------>");
             foreach (Cards card in DeckOfCards)
             {
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
