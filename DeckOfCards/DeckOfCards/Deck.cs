@@ -11,7 +11,10 @@ namespace DeckOfCards
 
         int count;
 
-        //Adds cards to the deck
+        /// <summary>
+        /// Adds a card
+        /// </summary>
+        /// <param name="card"></param>
         public void Add(T card)
         {
             if (count == deck.Length)
@@ -21,15 +24,21 @@ namespace DeckOfCards
             deck[count++] = card;
         }
 
-        //Remove a card
+        /// <summary>
+        /// Removes a card
+        /// </summary>
+        /// <param name="card"></param>
         public void Remove(T card)
         {
+            //this method removes the most recently added card
             deck[--count] = card;
             Array.Resize(ref deck, deck.Length - 1);
         }
 
-        //shuffle the deck
-        //pass it a Deck of type T
+        /// <summary>
+        /// Shuffle the deck of type T
+        /// </summary>
+        /// <param name="deckOfCards"></param>
         public void Shuffle(Deck<T> deckOfCards)
         {
             Random r = new Random();
