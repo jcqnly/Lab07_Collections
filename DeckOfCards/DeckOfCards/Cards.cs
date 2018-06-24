@@ -1,39 +1,22 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DeckOfCards
 {
-    class Cards<T> : IEnumerable
+    public class Cards
     {
-        T[] items = new T[16];
+        //properties for each card that will instantiated will
+        //have a value and a suit
+        public Values Values { get; set; }
+        public SuitsinDeck SuitsinDeck { get; set; }
 
-        int count;
-
-        //Adds cards to the deck
-        public void Add(T item)
+        //those values will be set to the type of Values and SuitsinDeck
+        //declared vith enums in Suits
+        public Cards(Values value, SuitsinDeck suitsInDeck)
         {
-            if (count == items.Length)
-            {
-                Array.Resize(ref items, items.Length * 2);
-            }
-            items[count++] = item;
-        }
-
-        //this was implemented to get the deck to write to the console
-        public IEnumerator<T> GetEnumerator()
-        {
-            for (int i = 0; i <= count; i++)
-            {
-
-                yield return items[i];
-            }
-        }
-        //Magic:
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return items.GetEnumerator();
+            Values = value;
+            SuitsinDeck = suitsInDeck;
         }
     }
 }
