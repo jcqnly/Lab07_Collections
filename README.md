@@ -10,7 +10,7 @@ This application runs on .NET Core 2.1, which can be downloaded [here](https://w
 After installing the [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/macos), clone this repo onto your machine. From a terminal interface, go to where this was cloned and type the following commands:
 
 ```
-cd Lab04_Collections
+cd Lab07_Collections
 dotnet restore
 dotnet run
 ```
@@ -62,5 +62,9 @@ The shuffled deck is then displayed.
 ## Acknowledgements
 -Thanks to Earl Jay for walking me through the process of using
 the enums when instantiating each card from the Card class.
+
+- Thanks to [jaatay](https://github.com/jaatay) for telling me 
+about the remove method and how to account that with the unit tests
+
 - Many thanks to [taylorjoshuaw](https://github.com/taylorjoshuaw) 
 for this awesome README layout.
