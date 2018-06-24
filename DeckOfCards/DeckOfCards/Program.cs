@@ -101,6 +101,7 @@ namespace DeckOfCards
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
             }
             Console.Read();
+
             Console.WriteLine("Let's remove that Ten of Spades from the deck.");
             DeckOfCards.Remove(card17);
             Console.Read();
@@ -110,6 +111,15 @@ namespace DeckOfCards
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
             }
             Console.Read();
+
+            Console.WriteLine("Let's shuffle the deck: ");
+            DeckOfCards.Shuffle(DeckOfCards);
+            foreach (Cards card in DeckOfCards)
+            {
+                Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
+            }
+            Console.Read();
+
             //Options();
         }
     }
