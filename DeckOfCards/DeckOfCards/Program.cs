@@ -7,16 +7,8 @@ namespace DeckOfCards
     {
         static void Main(string[] args)
         {
-            Options();
-        }
-        /// <summary>
-        /// Give user options to view, add or shuffle a card
-        /// Checks if user inputs one of the choices given
-        /// </summary>
-        public static void Options()
-        {
-            Console.WriteLine("Welcome!");
-                                  
+            Console.WriteLine("Let's see the deck: ");
+            UseTheDeck();
         }
 
         /// <summary>
@@ -26,7 +18,7 @@ namespace DeckOfCards
         /// Remove a card
         /// Shuffle the deck
         /// </summary>
-        public static void DisplayCards()
+        public static void UseTheDeck()
         {
             //create objects of Card type
             //pass in the 2 enums for each
@@ -49,6 +41,7 @@ namespace DeckOfCards
 
             //Collections initializer
             //add all the cards that were instantiated
+            //to the newly instantiated Deck of type Cards
             Deck<Cards> DeckOfCards = new Deck<Cards> {
                 card1, card2, card3, card4, card5, card6, card7, card8,
                 card9, card10, card11, card12, card13, card14, card15, card16
@@ -60,29 +53,32 @@ namespace DeckOfCards
             {
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
             }
-            Console.WriteLine();
             Console.Read();
             Console.Clear();
+            Console.Read();
+
             //adding a card to the deck requires an instantiation of a new Card object
-            Console.WriteLine("Let's add a Ten of Spades to the deck.");
+            Console.WriteLine("Let's add a Ten of Spades to the deck:");
             Cards card17 = new Cards((Values)5, (SuitsinDeck)1);
             DeckOfCards.Add(card17);
             foreach (Cards card in DeckOfCards)
             {
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
             }
-            Console.Read();
-
-            Console.WriteLine("Let's remove that Ten of Spades from the deck.");
-            DeckOfCards.Remove(card16);
-            Console.Read();
+            Console.ReadLine();
             Console.Clear();
+
+            //removing the most recently added card:
+            Console.WriteLine($"Let's remove that {card17.Values} of {card17.SuitsinDeck} from the deck:");
+            DeckOfCards.Remove(card16);
             foreach (Cards card in DeckOfCards)
             {
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
             }
             Console.Read();
+            Console.Clear();
 
+            //shuffling the deck:
             Console.WriteLine("Let's shuffle the deck: ");
             DeckOfCards.Shuffle(DeckOfCards);
             foreach (Cards card in DeckOfCards)
@@ -90,8 +86,6 @@ namespace DeckOfCards
                 Console.WriteLine($"{card.Values} of {card.SuitsinDeck}");
             }
             Console.Read();
-
-            //Options();
         }
     }
 }

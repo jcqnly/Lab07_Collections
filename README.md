@@ -1,6 +1,6 @@
 
 # Lab07 Collections
-Build a deck of cards and shuffle the cards using the concepts of generics and collections.
+Implement a deck of cards using the concepts of generics and collections.
 
 ## Dependencies
 This application runs on .NET Core 2.1, which can be downloaded [here](https://www.microsoft.com/net/download/macos).
@@ -16,23 +16,51 @@ dotnet run
 ```
 ---
 ## What this application does
-This application will create a deck of cards.  
+This application shows the user a deck of cards.
+The deck of cards is comprised of individual cards that were
+instantiated from a class called Cards.  Each instantiated cards' values
+were determined by 2 sets of enums: suits and face values.
+An IEnumerable called Deck was instantiated and filled with objects of type
+Card.  This list is then filled with each instantiated card.
 
-It will allow the deck to be shuffled.
+Adding a card required instantiating a new card of type Card
+with the new enum values.  This card is then passed to the Add
+method within the Deck class.
 
-New cards can be added.
+Removing a card required a card to be passed to the remove
+method in the Deck class.  The most recently card will be removed.
 
----
-## How to Use the Program
-Users can select to view the deck of cards, add a card, or shuffle the deck.
+Shuffling the deck required the entire deck to be sent to the
+Shuffle method in the Deck class.  A random number is generated
+and it won't exceed the length of the deck.  A temp variable of 
+type T is used to store the card that was removed.  The random
+card will then replace that removed card.  The removed card is
+then placed back into the deck.
+
+The shuffled deck is then displayed.
 
 ---
 
 ## Screenshot Walk Through
-1: Menu
+1: View the deck:
 
-![Menu](/assets/menu.png)
+![View Deck](/assets/viewTheDeck.png)
 
-2: View the Deck
+2: Add a card to the deck:
 
-![View the Deck](/assets/deck.png)
+![Add Card](/assets/addCard.png)
+
+3: Remove a card from the deck:
+
+![remove Card](/assets/removeCard.png)
+
+4. Shuffle the deck:
+
+![shuffle Deck](/assets/shuffleDeck.png)
+
+---
+## Acknowledgements
+-Thanks to Earl Jay for walking me through the process of using
+the enums when instantiating each card from the Card class.
+- Many thanks to [taylorjoshuaw](https://github.com/taylorjoshuaw) 
+for this awesome README layout.
